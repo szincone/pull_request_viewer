@@ -18,9 +18,9 @@ browser.get(url)
 
 
 def find_user_links(handles_list):
-    ###
+    """Finds links on page that match users """
     for user in handles_list:
-        print(browser.find_element_by_link_text(user))
+        print(browser.find_element_by_link_text(user).find_element_by_xpath("../.."))
 
 
 find_user_links(handles)
